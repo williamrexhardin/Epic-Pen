@@ -1,0 +1,79 @@
+﻿<Window x:Class="click_through_wpf.ToolsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="toolsWindow" WindowStyle="None" UseLayoutRounding="True" TextOptions.TextFormattingMode="Display" Topmost="True" ResizeMode="NoResize" AllowsTransparency="True" Background="{x:Null}" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="162" d:DesignWidth="307" SizeToContent="WidthAndHeight" Loaded="Window_Loaded">
+    <DockPanel>
+    <Border DockPanel.Dock="Top" BorderThickness="2"  BorderBrush="Black" MouseLeftButtonDown="MouseLeftButtonDown" ClipToBounds="True" Background="White">
+        <Grid>
+            <DockPanel>
+                <DockPanel DockPanel.Dock="Top">
+                    <Grid DockPanel.Dock="Right" Width="22" Height="22" Background="Red" Cursor="Hand" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+                        <Label FontFamily="Wingdings 2" Content="Ò" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></Label>
+                    </Grid>
+                    <Grid>
+                        <CheckBox Content="Click through"  Name="clickThroughCheckBox" ToolTip="(Ctrl + 1)" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4,0,0,0" Checked="clickThroughCheckBox_Checked" Unchecked="clickThroughCheckBox_Checked" />
+        </Grid>
+        </DockPanel>
+                <DockPanel Name="toolsDockPanel">
+                    <Border DockPanel.Dock="Right" Background="Black" Width="50" Name="selectedColourBorder" />
+                    <StackPanel>
+                    <ToolBarTray>
+                        <ToolBar>
+                            <Border Width="12" Height="12" Background="Black" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+                            <Border Width="12" Height="12" Background="Red" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+                            <Border Width="12" Height="12" Background="Blue" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+                            <Border Width="12" Height="12" Background="Green" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+                            <Border Width="12" Height="12" Background="Orange" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+                            <Border Width="12" Height="12" Background="Brown" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+                            <Border Width="12" Height="12" Background="Purple" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+                            <Border Width="12" Height="12" Background="Yellow" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+                            <Border Width="12" Height="12" Background="Firebrick" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+                            <Border Width="12" Height="12" Background="Pink" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+                            <Border Width="12" Height="12" Background="Snow" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+                            <Border Width="12" Height="12" Background="SlateGray" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+                            <Border Width="12" Height="12" Background="Violet" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+                            <Border Width="12" Height="12" Background="SpringGreen" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+                            <Border Width="12" Height="12" Background="YellowGreen" Margin="1,0,0,0" MouseDown="Border_MouseDown" Cursor="Hand" />
+
+                        </ToolBar>
+                    </ToolBarTray>
+                    <ToolBarTray>
+                            <ToolBar Name="brushSizeToolBar">
+                                <Button Width="22" Height="22" Margin="1,0,0,0" Cursor="Hand" Click="penSizeButton_MouseDown" Background="White" BorderBrush="Red">
+                                    <Ellipse Width="2" Height="2" Fill="Black" />
+                                </Button>
+                                <Button Width="22" Height="22" Margin="1,0,0,0" Cursor="Hand" Click="penSizeButton_MouseDown" Background="White">
+                                    <Ellipse Width="5" Height="5" Fill="Black" />
+                                </Button>
+                                <Button Width="22" Height="22" Margin="1,0,0,0"  Cursor="Hand" Click="penSizeButton_MouseDown" Background="White">
+                                    <Ellipse Width="10" Height="10" Fill="Black" />
+                                </Button>
+                                <Button Width="22" Height="22" Margin="1,0,0,0" Cursor="Hand" Click="penSizeButton_MouseDown" Background="White">
+                                    <Ellipse Width="16" Height="16" Fill="Black" />
+                                </Button>
+                            </ToolBar>
+                        </ToolBarTray>
+                        <ToolBarTray DockPanel.Dock="Bottom">
+                            <ToolBar Name="toolToolBar">
+                                <Button Name="penButton" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Pencil (Cntl + 2)" Click="penButton_Click" BorderBrush="Red">
+                                    <Image Source="/click%20through%20wpf;component/icons/pencil.png" ></Image>
+                                </Button>
+                                    <Button Name="highlighterButton" HorizontalAlignment="Center" VerticalAlignment="Center" Click="highlighterButton_Click">
+                                    <Image Source="/click%20through%20wpf;component/icons/highlighter.png" ToolTip="Highlighter (Ctrl + 3)"></Image>
+                                </Button>
+                                <Button HorizontalAlignment="Center" VerticalAlignment="Center" Click="eraserButton_Click" Name="eraserButton">
+                                    <Image Source="/click%20through%20wpf;component/icons/eraser.png" ToolTip="Eraser (Ctrl + 4)"></Image>
+                                </Button>
+                                <Button HorizontalAlignment="Center" VerticalAlignment="Center" Click="eraseAllButton_Click" Name="eraseAllButton">
+                                    <Image Source="/click%20through%20wpf;component/icons/erase%20all.png" ToolTip="Erase all (Ctrl + 5)"></Image>
+                                </Button>
+                            </ToolBar>
+                        </ToolBarTray>
+                    </StackPanel>
+                </DockPanel>
+            </DockPanel>
+        </Grid>
+        </Border>
+        <Grid/>
+    </DockPanel>    
+</Window>

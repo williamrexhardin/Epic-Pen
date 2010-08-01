@@ -1,0 +1,17 @@
+F:\click test\click through wpf\click through wpf\bin\x64\Debug\click through wpf.exe
+F:\click test\click through wpf\click through wpf\bin\x64\Debug\click through wpf.pdb
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\ResolveAssemblyReference.cache
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\MainWindow.baml
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\toolsWindow.baml
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\MainWindow.g.cs
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\toolsWindow.g.cs
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\App.g.cs
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\click through wpf_MarkupCompile.cache
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\click through wpf.g.resources
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\click_through_wpf.Properties.Resources.resources
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\GenerateResource.read.1.tlog
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\GenerateResource.write.1.tlog
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\click through wpf.exe
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\click through wpf.pdb
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\SettingsWindow.baml
+F:\click test\click through wpf\click through wpf\obj\x64\Debug\SettingsWindow.g.cs

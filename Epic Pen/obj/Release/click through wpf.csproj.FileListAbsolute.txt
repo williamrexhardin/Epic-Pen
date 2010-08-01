@@ -1,0 +1,36 @@
+F:\click test\click through wpf\click through wpf\bin\Release\click through wpf.exe
+F:\click test\click through wpf\click through wpf\bin\Release\click through wpf.pdb
+F:\click test\click through wpf\click through wpf\obj\Release\ResolveAssemblyReference.cache
+F:\click test\click through wpf\click through wpf\obj\Release\MainWindow.baml
+F:\click test\click through wpf\click through wpf\obj\Release\toolsWindow.baml
+F:\click test\click through wpf\click through wpf\obj\Release\MainWindow.g.cs
+F:\click test\click through wpf\click through wpf\obj\Release\toolsWindow.g.cs
+F:\click test\click through wpf\click through wpf\obj\Release\App.g.cs
+F:\click test\click through wpf\click through wpf\obj\Release\click through wpf_MarkupCompile.cache
+F:\click test\click through wpf\click through wpf\obj\Release\click through wpf.g.resources
+F:\click test\click through wpf\click through wpf\obj\Release\click_through_wpf.Properties.Resources.resources
+F:\click test\click through wpf\click through wpf\obj\Release\GenerateResource.read.1.tlog
+F:\click test\click through wpf\click through wpf\obj\Release\GenerateResource.write.1.tlog
+F:\click test\click through wpf\click through wpf\obj\Release\click through wpf.exe
+F:\click test\click through wpf\click through wpf\obj\Release\click through wpf.pdb
+F:\click test\click through wpf\click through wpf\obj\Release\SettingsWindow.baml
+F:\click test\click through wpf\click through wpf\obj\Release\SettingsWindow.g.cs
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\click through wpf.exe
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\click through wpf.pdb
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\bin\Release\click through wpf.exe
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\bin\Release\click through wpf.pdb
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\MainWindow.baml
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\SettingsWindow.baml
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\toolsWindow.baml
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\MainWindow.g.cs
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\SettingsWindow.g.cs
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\toolsWindow.g.cs
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\App.g.cs
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\click through wpf_MarkupCompile.cache
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\click through wpf.g.resources
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\click_through_wpf.Properties.Resources.resources
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\GenerateResource.read.1.tlog
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Release\GenerateResource.write.1.tlog
+C:\Program Files (x86)\Epic Pen\click through wpf.exe
+C:\Program Files (x86)\Epic Pen\click through wpf.pdb

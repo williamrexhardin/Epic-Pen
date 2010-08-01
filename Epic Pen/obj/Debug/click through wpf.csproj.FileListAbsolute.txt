@@ -1,0 +1,34 @@
+F:\click test\click through wpf\click through wpf\bin\Debug\click through wpf.exe
+F:\click test\click through wpf\click through wpf\bin\Debug\click through wpf.pdb
+F:\click test\click through wpf\click through wpf\obj\Debug\ResolveAssemblyReference.cache
+F:\click test\click through wpf\click through wpf\obj\Debug\MainWindow.baml
+F:\click test\click through wpf\click through wpf\obj\Debug\toolsWindow.baml
+F:\click test\click through wpf\click through wpf\obj\Debug\MainWindow.g.cs
+F:\click test\click through wpf\click through wpf\obj\Debug\toolsWindow.g.cs
+F:\click test\click through wpf\click through wpf\obj\Debug\App.g.cs
+F:\click test\click through wpf\click through wpf\obj\Debug\click through wpf_MarkupCompile.cache
+F:\click test\click through wpf\click through wpf\obj\Debug\click through wpf.g.resources
+F:\click test\click through wpf\click through wpf\obj\Debug\click_through_wpf.Properties.Resources.resources
+F:\click test\click through wpf\click through wpf\obj\Debug\GenerateResource.read.1.tlog
+F:\click test\click through wpf\click through wpf\obj\Debug\GenerateResource.write.1.tlog
+F:\click test\click through wpf\click through wpf\obj\Debug\click through wpf.exe
+F:\click test\click through wpf\click through wpf\obj\Debug\click through wpf.pdb
+F:\click test\click through wpf\click through wpf\obj\Debug\SettingsWindow.baml
+F:\click test\click through wpf\click through wpf\obj\Debug\SettingsWindow.g.cs
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\click through wpf.exe
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\click through wpf.pdb
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\bin\Debug\click through wpf.exe
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\bin\Debug\click through wpf.pdb
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\MainWindow.baml
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\SettingsWindow.baml
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\toolsWindow.baml
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\MainWindow.g.cs
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\SettingsWindow.g.cs
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\toolsWindow.g.cs
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\App.g.cs
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\click through wpf_MarkupCompile.cache
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\click through wpf.g.resources
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\click_through_wpf.Properties.Resources.resources
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\obj\Debug\GenerateResource.write.1.tlog

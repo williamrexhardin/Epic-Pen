@@ -1,0 +1,30 @@
+C:\Documents and Settings\Administrator\Local Settings\Application Data\Temporary Projects\click through wpf\bin\Debug\click through wpf.exe
+C:\Documents and Settings\Administrator\Local Settings\Application Data\Temporary Projects\click through wpf\bin\Debug\click through wpf.pdb
+C:\Documents and Settings\Administrator\Local Settings\Application Data\Temporary Projects\click through wpf\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\Local Settings\Application Data\Temporary Projects\click through wpf\obj\x86\Debug\MainWindow.baml
+C:\Documents and Settings\Administrator\Local Settings\Application Data\Temporary Projects\click through wpf\obj\x86\Debug\MainWindow.g.cs
+C:\Documents and Settings\Administrator\Local Settings\Application Data\Temporary Projects\click through wpf\obj\x86\Debug\App.g.cs
+C:\Documents and Settings\Administrator\Local Settings\Application Data\Temporary Projects\click through wpf\obj\x86\Debug\click through wpf_MarkupCompile.cache
+C:\Documents and Settings\Administrator\Local Settings\Application Data\Temporary Projects\click through wpf\obj\x86\Debug\click through wpf.g.resources
+C:\Documents and Settings\Administrator\Local Settings\Application Data\Temporary Projects\click through wpf\obj\x86\Debug\click_through_wpf.Properties.Resources.resources
+C:\Documents and Settings\Administrator\Local Settings\Application Data\Temporary Projects\click through wpf\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Administrator\Local Settings\Application Data\Temporary Projects\click through wpf\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\Administrator\Local Settings\Application Data\Temporary Projects\click through wpf\obj\x86\Debug\click through wpf.exe
+C:\Documents and Settings\Administrator\Local Settings\Application Data\Temporary Projects\click through wpf\obj\x86\Debug\click through wpf.pdb
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\click through wpf.exe
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\click through wpf.pdb
+F:\click test\click through wpf\click through wpf\bin\Debug\click through wpf.exe
+F:\click test\click through wpf\click through wpf\bin\Debug\click through wpf.pdb
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\MainWindow.baml
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\MainWindow.g.cs
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\App.g.cs
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\click through wpf_MarkupCompile.cache
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\click through wpf.g.resources
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\click_through_wpf.Properties.Resources.resources
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\toolsWindow.baml
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\toolsWindow.g.cs
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\SettingsWindow.baml
+F:\click test\click through wpf\click through wpf\obj\x86\Debug\SettingsWindow.g.cs
