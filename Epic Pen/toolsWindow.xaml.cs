@@ -62,6 +62,11 @@ namespace click_through_wpf
                 i.BorderBrush = null;
         }
 
+        public void cursorButton_Click(object sender, RoutedEventArgs e)
+        {
+            resetAllToolBackgrounds();
+            cursorButton.BorderBrush = Brushes.Red;
+        }
         public void penButton_Click(object sender, RoutedEventArgs e)
         {
             inkCanvas.Cursor = Cursors.Pen;
@@ -124,7 +129,7 @@ namespace click_through_wpf
         private void clickThroughCheckBox_Checked(object sender, RoutedEventArgs e)
         {
 
-            if ((bool)clickThroughCheckBox.IsChecked)
+            if ((bool)hideInkCheckBox.IsChecked)
                 toolsDockPanel.Height = 0;
             else
                 toolsDockPanel.Height = double.NaN;
@@ -136,5 +141,6 @@ namespace click_through_wpf
             Height = ActualHeight;
             SizeToContent = System.Windows.SizeToContent.Manual;
         }
+
     }
 }

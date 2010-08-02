@@ -11,13 +11,13 @@
 #define MyAppPublisher "Brian Hoary"
 
 ; Enter the path to your app project - check Visual Studio properties for the path
-#define MyAppLocation "C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf"
+#define MyAppLocation "C:\Users\Brian\Documents\Visual Studio 2010\Projects\Epic Pen\Epic Pen"
 
 ; Enter the name of your app executable
 #define MyAppExeName "click through wpf.exe"
 
 ; Enter the location where you have placed the VC and .NET redistributables
-#define MyRedistLocation "C:\Users\Brian\Documents\Visual Studio 2010\Projects\click through wpf\click through wpf\redist"
+#define MyRedistLocation "C:\Users\Brian\Documents\Visual Studio 2010\Projects\Epic Pen\Epic Pen\redist"
 
 ; search microsoft.com for "visual c++ sp1 redistributable" to get the VC redist
 ; enter the name of the executable file here

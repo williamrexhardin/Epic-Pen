@@ -105,6 +105,7 @@ namespace click_through_wpf
             RegisterHotKey(handle, GetType().GetHashCode(), 2, (int)hotkeys._3);
             RegisterHotKey(handle, GetType().GetHashCode(), 2, (int)hotkeys._4);
             RegisterHotKey(handle, GetType().GetHashCode(), 2, (int)hotkeys._5);
+            RegisterHotKey(handle, GetType().GetHashCode(), 2, (int)hotkeys._6);
         }
 
         
@@ -112,7 +113,7 @@ namespace click_through_wpf
         void ComponentDispatcher_ThreadPreprocessMessage(ref MSG msg, ref bool handled)
         {
 
-            if (msg.message == WM_HOTKEY)
+            if (msg.message == WM_HOTKEY&&enableHotkeys.Checked)
             {
                 int D = (((int)msg.lParam >> 16) & 0xFFFF);
                 int F = (((int)msg.lParam >> 16) & 0xFFFF);
@@ -120,24 +121,34 @@ namespace click_through_wpf
                 ModifierKeys modifier = (ModifierKeys)((int)msg.lParam & 0xFFFF);
 
                 if (key == hotkeys._1)
-                    toolsWindow.clickThroughCheckBox.IsChecked = !toolsWindow.clickThroughCheckBox.IsChecked;
+                    toolsWindow.hideInkCheckBox.IsChecked = !toolsWindow.hideInkCheckBox.IsChecked;
                 else if (key == hotkeys._2)
-                    toolsWindow.penButton_Click(new object(), new RoutedEventArgs());
+                {
+                    toolsWindow.cursorButton_Click(new object(), new RoutedEventArgs());
+                    ClickThrough = true;
+                }
                 else if (key == hotkeys._3)
-                    toolsWindow.highlighterButton_Click(new object(), new RoutedEventArgs());
+                {
+                    toolsWindow.penButton_Click(new object(), new RoutedEventArgs());
+                    ClickThrough = false;
+                }
                 else if (key == hotkeys._4)
-                    toolsWindow.eraserButton_Click(new object(), new RoutedEventArgs());
+                {
+                    toolsWindow.highlighterButton_Click(new object(), new RoutedEventArgs());
+                    ClickThrough = false;
+                }
                 else if (key == hotkeys._5)
+                {
+                    toolsWindow.eraserButton_Click(new object(), new RoutedEventArgs());
+                    ClickThrough = false;
+                }
+                else if (key == hotkeys._6)
                     toolsWindow.eraseAllButton_Click(new object(), new RoutedEventArgs());
             }
         }
 
-
-
-
         public const int WS_EX_TRANSPARENT = 0x00000020;
         public const int GWL_EXSTYLE = (-20);
-
         
         //if((IntPtr)
         [DllImport("user32.dll")]
@@ -168,8 +179,9 @@ namespace click_through_wpf
         ToolsWindow toolsWindow = new ToolsWindow();
         bool is64Bit;
         System.Windows.Forms.MenuItem rememberContent;
+        System.Windows.Forms.MenuItem enableHotkeys;
         string appDataDir;
-            
+        System.Windows.Forms.NotifyIcon trayIcon;
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
@@ -179,18 +191,25 @@ namespace click_through_wpf
 
 
 
-            System.Windows.Forms.NotifyIcon notifyIcon = new System.Windows.Forms.NotifyIcon(new System.ComponentModel.Container());
+            trayIcon = new System.Windows.Forms.NotifyIcon(new System.ComponentModel.Container());
 
-            notifyIcon.Icon = new System.Drawing.Icon(GetType(), "pencilIcon.ico");
-            notifyIcon.Visible = true;
+            trayIcon.Icon = new System.Drawing.Icon(GetType(), "pencilIcon.ico");
+            trayIcon.Visible = true;
             //notify icon:
+            System.Windows.Forms.MenuItem about = new System.Windows.Forms.MenuItem("About Epic Pen");
+            about.Click += new EventHandler(about_Click);
+            enableHotkeys = new System.Windows.Forms.MenuItem("Enable hotkeys");
+            enableHotkeys.Checked = true;
+            enableHotkeys.Click += new EventHandler(enableHotkeys_Click);
             rememberContent = new System.Windows.Forms.MenuItem("Remeber content when closed");
             rememberContent.Checked = false;
             rememberContent.Click += new EventHandler(rememberContent_Click);
             System.Windows.Forms.MenuItem exit = new System.Windows.Forms.MenuItem("Exit");
             exit.Click += new EventHandler(toolsWindow_CloseButtonClick);
 
-            notifyIcon.ContextMenu = new System.Windows.Forms.ContextMenu(new System.Windows.Forms.MenuItem[] { rememberContent, exit });
+
+
+            trayIcon.ContextMenu = new System.Windows.Forms.ContextMenu(new System.Windows.Forms.MenuItem[] { about, enableHotkeys, rememberContent, exit });
 
             this.Closing += new System.ComponentModel.CancelEventHandler(MainWindow_Closing);
 
@@ -232,14 +251,53 @@ namespace click_through_wpf
             toolsWindow.Owner = this;
             toolsWindow.CloseButtonClick += new EventHandler(toolsWindow_CloseButtonClick);
 
-            toolsWindow.clickThroughCheckBox.Checked += new RoutedEventHandler(clickThroughCheckBox_Checked);
-            toolsWindow.clickThroughCheckBox.Unchecked += new RoutedEventHandler(clickThroughCheckBox_Checked);
+            toolsWindow.hideInkCheckBox.Checked += new RoutedEventHandler(hideInkCheckBox_Checked);
+            toolsWindow.hideInkCheckBox.Unchecked += new RoutedEventHandler(hideInkCheckBox_Checked);
 
+            toolsWindow.cursorButton.Click += new RoutedEventHandler(cursorButton_Click);
+            toolsWindow.penButton.Click += new RoutedEventHandler(drawButton_Click);
+            toolsWindow.highlighterButton.Click += new RoutedEventHandler(drawButton_Click);
+            toolsWindow.eraserButton.Click += new RoutedEventHandler(drawButton_Click);
+            cursorButton_Click(new object(), new RoutedEventArgs());
             toolsWindow.Show();
+        }
+
+        void drawButton_Click(object sender, RoutedEventArgs e)
+        { ClickThrough = false; }
+
+        void cursorButton_Click(object sender, RoutedEventArgs e)
+        { ClickThrough = true; }
+
+        bool clickThrough = false;
+
+        public bool ClickThrough
+        {
+            get { return clickThrough; }
+            set
+            {
+                clickThrough = value;
+                if (clickThrough)
+                {
+                    if (is64Bit)
+                        SetWindowLongPtr(hwnd, GWL_EXSTYLE, extendedStyle | WS_EX_TRANSPARENT);
+                    else
+                        SetWindowLong(hwnd, GWL_EXSTYLE, extendedStyle | WS_EX_TRANSPARENT);
+                    Background = null;
+                }
+                else
+                {
+                    if (is64Bit)
+                        SetWindowLongPtr(hwnd, GWL_EXSTYLE, extendedStyle | 0);
+                    else
+                        SetWindowLong(hwnd, GWL_EXSTYLE, extendedStyle | 0);
+                    Background = new SolidColorBrush(Color.FromArgb(1, 0, 0, 0));
+                }
+            }
         }
 
         void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            trayIcon.Visible = false;
             saveSettings();
             if (rememberContent.Checked)
             {
@@ -258,6 +316,9 @@ namespace click_through_wpf
             xmlDoc.LastChild.AppendChild(xmlDoc.CreateElement("RememberContent"));
             xmlDoc.LastChild.LastChild.Attributes.Append(xmlDoc.CreateAttribute("value"));
             xmlDoc.LastChild.LastChild.Attributes["value"].Value = rememberContent.Checked.ToString();
+            xmlDoc.LastChild.AppendChild(xmlDoc.CreateElement("EnableHotkeys"));
+            xmlDoc.LastChild.LastChild.Attributes.Append(xmlDoc.CreateAttribute("value"));
+            xmlDoc.LastChild.LastChild.Attributes["value"].Value = enableHotkeys.Checked.ToString();
             xmlDoc.Save(appDataDir + "\\settings.xml");
         }
 
@@ -267,39 +328,46 @@ namespace click_through_wpf
             XmlDocument xmlDoc = new XmlDocument();
             if (File.Exists(appDataDir + "\\settings.xml"))
             {
-                xmlDoc.Load(appDataDir + "\\settings.xml");
-                rememberContent.Checked = bool.Parse(xmlDoc.LastChild.LastChild.Attributes["value"].Value);
+                try
+                {
+                    xmlDoc.Load(appDataDir + "\\settings.xml");
+                    rememberContent.Checked = bool.Parse(xmlDoc.LastChild["RememberContent"].Attributes["value"].Value);
+                    enableHotkeys.Checked = bool.Parse(xmlDoc.LastChild["EnableHotkeys"].Attributes["value"].Value);
+
+                }
+                catch (Exception)
+                {                    
+                }
             }
         }
-
+        
         void rememberContent_Click(object sender, EventArgs e)
         {
             rememberContent.Checked = !rememberContent.Checked;
         }
+        void enableHotkeys_Click(object sender, EventArgs e)
+        {
+            enableHotkeys.Checked = !enableHotkeys.Checked;
+        }
+        void about_Click(object sender, EventArgs e)
+        {
+            AboutWindow aboutWindow = new AboutWindow();
+            aboutWindow.Owner = this;
+            aboutWindow.Show();
+        }
+
 
         void toolsWindow_CloseButtonClick(object sender, EventArgs e)
         {
             Close();
         }
 
-        void clickThroughCheckBox_Checked(object sender, RoutedEventArgs e)
+        void hideInkCheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            if ((bool)toolsWindow.clickThroughCheckBox.IsChecked == true)
-            {
-                if(is64Bit)
-                SetWindowLongPtr(hwnd, GWL_EXSTYLE, extendedStyle | WS_EX_TRANSPARENT);
-                else
-                    SetWindowLong(hwnd, GWL_EXSTYLE, extendedStyle | WS_EX_TRANSPARENT);
-                Background = null;
-            }
+            if ((bool)((CheckBox)sender).IsChecked)
+                this.Visibility = System.Windows.Visibility.Hidden;
             else
-            {
-                if (is64Bit)
-                SetWindowLongPtr(hwnd, GWL_EXSTYLE, extendedStyle | 0);
-                else
-                    SetWindowLong(hwnd, GWL_EXSTYLE, extendedStyle | 0);
-                Background = new SolidColorBrush(Color.FromArgb(1, 0, 0, 0));
-            }
+                this.Visibility = System.Windows.Visibility.Visible;
         }
     }
 }

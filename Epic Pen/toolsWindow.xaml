@@ -11,7 +11,7 @@
                         <Label FontFamily="Wingdings 2" Content="Ò" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"></Label>
                     </Grid>
                     <Grid>
-                        <CheckBox Content="Click through"  Name="clickThroughCheckBox" ToolTip="(Ctrl + 1)" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4,0,0,0" Checked="clickThroughCheckBox_Checked" Unchecked="clickThroughCheckBox_Checked" />
+                        <CheckBox Content="Hide Ink"  Name="hideInkCheckBox" ToolTip="(Ctrl + 1)" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4,0,0,0" Checked="clickThroughCheckBox_Checked" Unchecked="clickThroughCheckBox_Checked" />
         </Grid>
         </DockPanel>
                 <DockPanel Name="toolsDockPanel">
@@ -55,17 +55,20 @@
                         </ToolBarTray>
                         <ToolBarTray DockPanel.Dock="Bottom">
                             <ToolBar Name="toolToolBar">
-                                <Button Name="penButton" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Pencil (Cntl + 2)" Click="penButton_Click" BorderBrush="Red">
-                                    <Image Source="/click%20through%20wpf;component/icons/pencil.png" ></Image>
-                                </Button>
+                                    <Button Name="cursorButton" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Cursor (Cntl + 2)" Click="cursorButton_Click" BorderBrush="Red">
+                                        <Image Source="/click%20through%20wpf;component/icons/pencil.png" ></Image>
+                                    </Button>
+                                    <Button Name="penButton" HorizontalAlignment="Center" VerticalAlignment="Center" ToolTip="Pencil (Cntl + 3)" Click="penButton_Click">
+                                        <Image Source="/click%20through%20wpf;component/icons/pencil.png" ></Image>
+                                    </Button>
                                     <Button Name="highlighterButton" HorizontalAlignment="Center" VerticalAlignment="Center" Click="highlighterButton_Click">
-                                    <Image Source="/click%20through%20wpf;component/icons/highlighter.png" ToolTip="Highlighter (Ctrl + 3)"></Image>
+                                    <Image Source="/click%20through%20wpf;component/icons/highlighter.png" ToolTip="Highlighter (Ctrl + 4)"></Image>
                                 </Button>
                                 <Button HorizontalAlignment="Center" VerticalAlignment="Center" Click="eraserButton_Click" Name="eraserButton">
-                                    <Image Source="/click%20through%20wpf;component/icons/eraser.png" ToolTip="Eraser (Ctrl + 4)"></Image>
+                                    <Image Source="/click%20through%20wpf;component/icons/eraser.png" ToolTip="Eraser (Ctrl + 5)"></Image>
                                 </Button>
                                 <Button HorizontalAlignment="Center" VerticalAlignment="Center" Click="eraseAllButton_Click" Name="eraseAllButton">
-                                    <Image Source="/click%20through%20wpf;component/icons/erase%20all.png" ToolTip="Erase all (Ctrl + 5)"></Image>
+                                    <Image Source="/click%20through%20wpf;component/icons/erase%20all.png" ToolTip="Erase all (Ctrl + 6)"></Image>
                                 </Button>
                             </ToolBar>
                         </ToolBarTray>
