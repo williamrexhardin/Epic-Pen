@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace click_through_wpf
+namespace Epic_Pen
 {
     /// <summary>
     /// Interaction logic for SettingsWindow.xaml

@@ -12,8 +12,9 @@ C:\Users\Brian\Documents\Visual Studio 2010\Projects\Epic Pen\Epic Pen\obj\Relea
 C:\Users\Brian\Documents\Visual Studio 2010\Projects\Epic Pen\Epic Pen\obj\Release\App.g.cs
 C:\Users\Brian\Documents\Visual Studio 2010\Projects\Epic Pen\Epic Pen\obj\Release\click through wpf_MarkupCompile.cache
 C:\Users\Brian\Documents\Visual Studio 2010\Projects\Epic Pen\Epic Pen\obj\Release\click through wpf.g.resources
-C:\Users\Brian\Documents\Visual Studio 2010\Projects\Epic Pen\Epic Pen\obj\Release\click_through_wpf.Properties.Resources.resources
 C:\Users\Brian\Documents\Visual Studio 2010\Projects\Epic Pen\Epic Pen\obj\Release\GenerateResource.read.1.tlog
 C:\Users\Brian\Documents\Visual Studio 2010\Projects\Epic Pen\Epic Pen\obj\Release\GenerateResource.write.1.tlog
 C:\Users\Brian\Documents\Visual Studio 2010\Projects\Epic Pen\Epic Pen\obj\Release\AboutWindow.baml
 C:\Users\Brian\Documents\Visual Studio 2010\Projects\Epic Pen\Epic Pen\obj\Release\AboutWindow.g.cs
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\Epic Pen\Epic Pen\obj\Release\Epic_Pen.Properties.Resources.resources
+C:\Users\Brian\Documents\Visual Studio 2010\Projects\Epic Pen\Epic Pen\obj\Release\icons\noun_project_389.baml

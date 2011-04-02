@@ -8,10 +8,11 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace click_through_wpf
+namespace Epic_Pen
 {
     /// <summary>
     /// Interaction logic for toolsWindow.xaml
@@ -58,14 +59,14 @@ namespace click_through_wpf
 
         private void resetAllToolBackgrounds()
         {
-            foreach (Button i in toolToolBar.Items)
-                i.BorderBrush = null;
+            foreach (Button i in toolStackPanel.Children)
+                i.Style = defaultButtonStyle;
         }
 
         public void cursorButton_Click(object sender, RoutedEventArgs e)
         {
             resetAllToolBackgrounds();
-            cursorButton.BorderBrush = Brushes.Red;
+            cursorButton.Style = (Style)FindResource("highlightedButtonStyle");
         }
         public void penButton_Click(object sender, RoutedEventArgs e)
         {
@@ -74,7 +75,8 @@ namespace click_through_wpf
             inkCanvas.DefaultDrawingAttributes.IsHighlighter = false;
             setBrushSize();
             resetAllToolBackgrounds();
-            penButton.BorderBrush = Brushes.Red;
+            penButton.Style = (Style)FindResource("highlightedButtonStyle");
+
         }
 
         public void highlighterButton_Click(object sender, RoutedEventArgs e)
@@ -84,7 +86,7 @@ namespace click_through_wpf
             inkCanvas.DefaultDrawingAttributes.IsHighlighter = true;
             setBrushSize();
             resetAllToolBackgrounds();
-            highlighterButton.BorderBrush = Brushes.Red;
+            highlighterButton.Style = (Style)FindResource("highlightedButtonStyle");
 
         }
         
@@ -94,7 +96,7 @@ namespace click_through_wpf
             inkCanvas.EditingMode = InkCanvasEditingMode.EraseByStroke;
             setBrushSize();
             resetAllToolBackgrounds();
-            eraserButton.BorderBrush = Brushes.Red;     
+            eraserButton.Style = (Style)FindResource("highlightedButtonStyle");   
         }
         
         public void eraseAllButton_Click(object sender, RoutedEventArgs e)
@@ -107,9 +109,9 @@ namespace click_through_wpf
             penSize = ((Ellipse)((Button)sender).Content).Width;
             setBrushSize();
 
-            foreach (Button i in brushSizeToolBar.Items)
-                i.BorderBrush = null;
-            ((Button)sender).BorderBrush = Brushes.Red;  
+            foreach (Button i in brushSizeStackPanel.Children)
+                i.Style = defaultButtonStyle;
+            ((Button)sender).Style = (Style)FindResource("highlightedButtonStyle");   
         }
 
         private void setBrushSize()
@@ -130,16 +132,52 @@ namespace click_through_wpf
         {
 
             if ((bool)hideInkCheckBox.IsChecked)
-                toolsDockPanel.Height = 0;
+            {
+                //toolsDockPanel.Height = 0;
+                DoubleAnimation doubleAnimation = new DoubleAnimation();
+                doubleAnimation.From = toolsDockPanelDefaultHeight;
+                doubleAnimation.To = 0;
+                doubleAnimation.Duration = new Duration(new TimeSpan(0,0,0,0,200));
+                ExponentialEase expoEase = new ExponentialEase();
+                expoEase.Exponent = 7;
+                doubleAnimation.EasingFunction = expoEase;
+                //Storyboard.SetTargetName(doubleAnimation, toolsDockPanel.Name);
+                Storyboard.SetTarget(doubleAnimation, toolsDockPanel);
+                Rectangle rect = new Rectangle();
+                Storyboard.SetTargetProperty(doubleAnimation, new PropertyPath(DockPanel.HeightProperty));
+                Storyboard storyboard = new Storyboard();
+                storyboard.Children.Add(doubleAnimation);
+                storyboard.Begin();
+            }
             else
-                toolsDockPanel.Height = double.NaN;
+            {
+                //toolsDockPanel.Height = double.NaN;
+                DoubleAnimation doubleAnimation = new DoubleAnimation();
+                doubleAnimation.From = 0;
+                doubleAnimation.To = toolsDockPanelDefaultHeight;
+                doubleAnimation.Duration = new Duration(new TimeSpan(0, 0, 0,0, 200));
+                ExponentialEase expoEase = new ExponentialEase();
+                expoEase.Exponent = 7;
+                doubleAnimation.EasingFunction = expoEase;
+                //Storyboard.SetTargetName(doubleAnimation, toolsDockPanel.Name);
+                Storyboard.SetTarget(doubleAnimation, toolsDockPanel);
+                Rectangle rect = new Rectangle();
+                Storyboard.SetTargetProperty(doubleAnimation, new PropertyPath(DockPanel.HeightProperty));
+                Storyboard storyboard = new Storyboard();
+                storyboard.Children.Add(doubleAnimation);
+                storyboard.Begin();
+            }
 
         }
-
+        Style defaultButtonStyle;
+        double toolsDockPanelDefaultHeight;
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            toolsDockPanel.Height = toolsDockPanel.ActualHeight;
+            toolsDockPanelDefaultHeight = toolsDockPanel.Height;
             Height = ActualHeight;
             SizeToContent = System.Windows.SizeToContent.Manual;
+            defaultButtonStyle = eraseAllButton.Style;
         }
 
     }

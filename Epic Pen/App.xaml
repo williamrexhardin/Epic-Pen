@@ -1,4 +1,4 @@
-﻿<Application x:Class="click_through_wpf.App"
+﻿<Application x:Class="Epic_Pen.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">

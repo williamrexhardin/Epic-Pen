@@ -8,7 +8,7 @@
     <ProjectGuid>{0165969A-8C55-4C8C-A1A1-3DADB0982DD6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>click_through_wpf</RootNamespace>
+    <RootNamespace>Epic_Pen</RootNamespace>
     <AssemblyName>click through wpf</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -112,6 +112,10 @@
     <Page Include="AboutWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="icons\noun_project_389.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

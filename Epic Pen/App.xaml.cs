@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows;
 
-namespace click_through_wpf
+namespace Epic_Pen
 {
     /// <summary>
     /// Interaction logic for App.xaml

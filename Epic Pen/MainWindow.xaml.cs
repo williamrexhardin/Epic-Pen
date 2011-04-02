@@ -37,7 +37,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Interop;
 using System.IO;
 
-namespace click_through_wpf
+namespace Epic_Pen
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -201,7 +201,7 @@ namespace click_through_wpf
             enableHotkeys = new System.Windows.Forms.MenuItem("Enable hotkeys");
             enableHotkeys.Checked = true;
             enableHotkeys.Click += new EventHandler(enableHotkeys_Click);
-            rememberContent = new System.Windows.Forms.MenuItem("Remeber content when closed");
+            rememberContent = new System.Windows.Forms.MenuItem("Remember content when closed");
             rememberContent.Checked = false;
             rememberContent.Click += new EventHandler(rememberContent_Click);
             System.Windows.Forms.MenuItem exit = new System.Windows.Forms.MenuItem("Exit");
